@@ -11,10 +11,10 @@ class Library
 private:
     std::vector<Book<char>> booksCH;
     std::vector<Book<int>> booksINT;
-    std::vector<Book<char>>::iterator iBooksCH;
-    std::vector<Book<int>>::iterator iBooksINT;
+//    std::vector<Book<char>>::iterator iBooksCH;
+//    std::vector<Book<int>>::iterator iBooksINT;
     std::vector<Author> authors;
-    std::vector<Author>::iterator iAuthors;
+//    std::vector<Author>::iterator iAuthors;
 public:
     void addBook(int& bookId, int now);
     void showBooks();

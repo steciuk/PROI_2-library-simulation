@@ -75,14 +75,14 @@ void Library::addBookAuthor(Book<int>& book)
 
 void Library::showBooks()
 {
-    for( this->iBooksCH = booksCH.begin(); iBooksCH != booksCH.end(); iBooksCH++ )
+    for( vector<Book<char>>::iterator iBooksCH = booksCH.begin(); iBooksCH != booksCH.end(); iBooksCH++ )
     {
         iBooksCH->showBook();
         cout << endl;
         vector<int> authorIdsCH = iBooksCH->getAuthorId();
         for( vector<int>::iterator i = authorIdsCH.begin(); i != authorIdsCH.end(); i++ )
         {
-            for( this->iAuthors = authors.begin(); iAuthors != authors.end(); iAuthors++ )
+            for( vector<Author>::iterator iAuthors = authors.begin(); iAuthors != authors.end(); iAuthors++ )
             {
                 if(*i == iAuthors->getId())
                 {
@@ -92,14 +92,14 @@ void Library::showBooks()
         }
     }
 
-    for( this->iBooksINT = booksINT.begin(); iBooksINT != booksINT.end(); iBooksINT++ )
+    for( vector<Book<int>>::iterator iBooksINT = booksINT.begin(); iBooksINT != booksINT.end(); iBooksINT++ )
     {
         iBooksINT->showBook();
         cout << endl;
         vector<int> authorIdsINT = iBooksINT->getAuthorId();
         for( vector<int>::iterator i = authorIdsINT.begin(); i != authorIdsINT.end(); i++ )
         {
-            for( this->iAuthors = authors.begin(); iAuthors != authors.end(); iAuthors++ )
+            for( vector<Author>::iterator iAuthors = authors.begin(); iAuthors != authors.end(); iAuthors++ )
             {
                 if(*i == iAuthors->getId())
                 {
@@ -128,7 +128,7 @@ void Library::addAuthor(int& authorId)
 
 void Library::showAuthors()
 {
-    for( this->iAuthors = authors.begin(); iAuthors != authors.end(); iAuthors++ )
+    for( vector<Author>::iterator iAuthors = authors.begin(); iAuthors != authors.end(); iAuthors++ )
     {
         iAuthors->showAuthor();
     }
